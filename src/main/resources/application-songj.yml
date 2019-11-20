@@ -1,0 +1,66 @@
+server:
+  port: 8181
+management:
+  health:
+    mail:
+      enabled: false
+
+spring:
+  datasource:
+    druid:
+      default:
+        url: jdbc:oracle:thin:@obmdb.bbgdb.com.cn:1521:zyppdb
+        username: csmb
+        password: csmb
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 10000
+    #注意如果redis无密码,password可以设置为none
+    password: 87032056
+
+cross:
+  domain: http://localhost:8080,https://localhost:8443,*
+
+wx:
+  corpId: wxb7d37997b7462f8c
+  appSecret: 3UPZCw2s81FQfriTV5tAnKAv55tEJJI0Z2-L9eMkucU
+  agentId: 1000035
+  otherLogo: D:/csmobile/apps/data/data-logo.png
+  warnLogo: D:/csmobile/apps/data/data-logo.png
+  businessLogo: D:/csmobile/apps/data/data-logo.png
+  message:
+    whiteIp: 192.168.99.29,10.12.27.115
+
+scmwx:
+  corpId: wxb7d37997b7462f8c
+  appSecret: RY68mdH3ULw3B1ZuIBqu1FA2Gjps8ln-tJXZitXid5I
+  agentId: 1000063
+
+tt:
+  deadline: 2019-01-30 18:00:00
+
+path:
+  log: D:/csmobile/logs/bi
+  transferFilePath: D:/csmobile/apps/data
+
+store:
+  db:
+    cs:
+      userName: bbgcs
+      password: drowssap
+    jd:
+      userName: bbgdq
+      password: drowssap
+    zyppdb:
+      userName: BIQUERY
+      password: BIQUERY123~
+      sid: zyppdb
+      host: obmdb.bbgdb.com.cn
+      port: 1521
+    rmsdg:
+      userName: rmsquery
+      password: rmsquery
+      sid: rmsdb
+      host: //rtkdg-scan.bbgretek.com.cn
+      port: 1521

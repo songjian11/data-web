@@ -1,0 +1,62 @@
+server:
+  port: 8181
+  
+spring:
+  datasource:
+    druid:
+      default:
+        url: jdbc:oracle:thin:@192.168.7.154:1521:tgtstdb
+        username: csmbtst
+        password: csmbtst
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 10000
+    #注意如果redis无密码,password可以设置为none
+    password: 123456
+
+cross:
+   domain: http://localhost:8080,https://localhost:8443,*
+
+wx:
+  corpId: wxb7d37997b7462f8c
+  appSecret: 3UPZCw2s81FQfriTV5tAnKAv55tEJJI0Z2-L9eMkucU
+  agentId: 1000035
+  otherLogo: D:/data-logo.png
+  warnLogo: D:/data-logo.png
+  businessLogo: D:/data-logo.png
+  message:
+    whiteIp: 10.12.27.53,127.0.0.1
+
+scmwx:
+  corpId: wxb7d37997b7462f8c
+  appSecret: 3UPZCw2s81FQfriTV5tAnKAv55tEJJI0Z2-L9eMkucU
+  agentId: 1000035
+
+tt:
+  deadline: 2019-01-21 20:00:00
+  
+path:
+  log: D:/develop/logs/cs-mobile-api
+  transferFilePath: D:/develop/data/cs-mobile-api
+  
+store:
+  db:
+    cs:
+      userName: test
+      password: test
+    jd:
+      userName: test
+      password: test
+    zyppdb:
+      userName: test
+      password: test
+      sid: test
+      host: localhost
+      port: 1521
+    rmsdg:
+      userName: test
+      password: test
+      sid: test
+      host: localhost
+      port: 1521

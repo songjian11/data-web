@@ -1,0 +1,50 @@
+#日志配置
+logging:
+   config: classpath:logback-spring.xml  
+   level:
+    com.cs: debug
+    org.springframework: WARN
+    org.spring.springboot.dao: debug   
+    org.springframework.jdbc.core.JdbcTemplate: debug
+    
+spring:
+  profiles:
+    active: songj
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: oracle.jdbc.OracleDriver
+    druid:
+      # 初始连接数
+      initialSize: 5
+      # 最小连接池数量
+      minIdle: 10
+      # 最大连接池数量
+      maxActive: 20
+      # 配置获取连接等待超时的时间
+      maxWait: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 300000
+      # 配置一个连接在池中最大生存的时间，单位是毫秒
+      maxEvictableIdleTimeMillis: 900000
+      # 配置检测连接是否有效
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false      
+      filters: stat,wall
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  # 文件上传
+  servlet:
+     multipart:
+       # 单个文件大小
+       max-file-size:  20MB
+       # 设置总上传的文件大小
+       max-request-size:  20MB
+       
+swagger:
+   enable: true   
+
